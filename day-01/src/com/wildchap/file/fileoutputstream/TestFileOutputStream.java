@@ -1,4 +1,4 @@
-package com.wildchap.fileoutputstream;
+package com.wildchap.file.fileoutputstream;
 
 import java.io.FileOutputStream;
 

@@ -1,4 +1,4 @@
-package com.wildchap.copyfile;
+package com.wildchap.file.copyfile;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
