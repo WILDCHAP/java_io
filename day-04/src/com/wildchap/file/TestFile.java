@@ -18,6 +18,7 @@ public class TestFile {
     public static void main(String[] args) throws Exception{
         separator();
         fileop();
+        directory();
     }
     /*
     (1)分隔符
@@ -56,5 +57,30 @@ public class TestFile {
         System.out.println(file.isFile());      //是否是文件
         System.out.println(file.isHidden());    //是否隐藏
         System.out.println(file.isDirectory()); //是否文件夹
+    }
+    /*
+    （3）文件夹操作
+     */
+    public static void directory(){
+        //1.创建文件夹
+        File dir = new File("dir");
+        if(!dir.exists()){
+            System.out.println("创建文件夹结果：" + dir.mkdir());
+        }
+        //2.删除文件夹
+        //System.out.println("删除文件结果：" + dir.delete());
+        //3.获取文件夹信息
+        System.out.println(dir.getAbsolutePath());
+        //4.判断
+        System.out.println(dir.isDirectory());
+        //5.遍历
+        for(String s:dir.list()){
+            System.out.println(s);
+        }
+        for(File f:dir.listFiles()){
+            if(f.isDirectory()){
+                f.delete();
+            }
+        }
     }
 }
